@@ -1,0 +1,280 @@
+@import "reset.css";
+
+/*------------------------------Initialize------------------------------*/
+:root{
+    --Primary-Color     : #2d3e50;
+    --Secondary-Color   : #1dd2af;
+    --Text              : #5d6e80;
+    --DarkSeperator     : #17212a;
+    --LightSeperator    : #374d64;
+    --Pinterest         : #bd091d;
+    --Tumbler           : #444444;
+    --Tweeter           : #1da1f2;
+    --Facebook          : #4867aa;
+}
+@font-face {
+    font-family: 'Yekan';
+    src: url('../fonts/BYekan.eot?#') format('eot'),    /* IE6–8 */
+    url('../fonts/BYekan.woff') format('woff'),         /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/BYekan.ttf') format('truetype');      /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+/*------------------------------/Initialize------------------------------*/
+
+/*------------------------------Global------------------------------*/
+*{
+    outline: none;
+}
+body, input{
+    direction: rtl;
+    text-align: right;
+    font: 14px/30px 'Yekan', Tahoma;
+    color: var(--Text);
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.clearfix{
+    clear: both;
+    float: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+/*------------------------------/Global------------------------------*/
+
+/*------------------------------Template Global------------------------------*/
+.btn{
+    background-color: #1dd2af;
+    border: none;
+    padding: 10px 30px;
+    color: white;
+}
+.btn-bordered{
+    border : white solid 1px;
+}
+/*------------------------------/Template Global------------------------------*/
+
+/*------------------------------Header------------------------------*/
+header{
+    background-color: var(--Primary-Color);
+}
+header div.top-header{
+    padding-top: 4px;
+}
+header div.top-header ul.menu{
+    float: right;
+}
+header div.top-header ul.menu.social{
+    float: left;
+}
+header div.top-header ul.menu li{
+    display: inline-block;
+    position: relative;
+    margin-left: 20px;
+}
+header div.top-header ul.menu li.pinterest:hover a{color : var(--Pinterest);}
+header div.top-header ul.menu li.tumblr a:hover{color: var(--Tumbler)}
+header div.top-header ul.menu li.twitter a:hover{color: var(--Tweeter)}
+header div.top-header ul.menu li.facebook a:hover{color: var(--Facebook)}
+header div.top-header ul.menu li:before,
+header div.top-header ul.menu li:after{
+    position: absolute;
+    content: ' ';
+    display: block;
+    height: 39px;
+    top: -4px;
+}
+header div.top-header ul.menu li:before{
+    left: -10px;
+    border-left: var(--LightSeperator) solid 1px;
+}
+header div.top-header ul.menu li:after{
+    left: -11px;
+    border-left: var(--DarkSeperator) solid 1px;
+}
+header div.top-header ul.menu li a{
+    color: white;
+    text-decoration: none;
+    transition: all ease-in-out 0.2s;
+}
+header div.top-header ul.menu li a:hover{
+    color: var(--Secondary-Color);
+}
+header div.top-header ul.menu li a i{
+    padding-right: 10px;
+}
+header div.top-header ul.menu.social li a i{
+    padding: 10px 0 0 0;
+}
+header div.top-header ul.menu li a span{
+    color: var(--Secondary-Color);
+    padding-right: 3px;
+}
+header nav{
+    background-color: white;
+    height: 35px;
+    margin-top: 3px;
+    padding: 20px 0;
+}
+header nav ul{
+    display: inline-block;
+}
+header nav ul li{
+    display: inline-block;
+    margin-left: 25px;
+}
+header nav ul li.search{
+    border: solid 2px var(--Text);
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+}
+header nav ul li.active a{
+    color: var(--Secondary-Color);
+}
+header nav ul li a{
+    color: var(--Text);
+    text-decoration: none;
+    font-weight: 900;
+    display: inline-block;
+    margin-top: -10px;
+}
+header nav ul li a i.fa{
+    font-size: 16px;
+    position: absolute;
+    top: 6px;
+    right: 7px;
+}
+header nav img.logo{
+    float: left;
+    margin-top: -6px;
+}
+/*------------------------------/Header------------------------------*/
+
+/*------------------------------Slider------------------------------*/
+#slider{
+    position: relative;
+    color: white;
+}
+#slider ul{
+
+}
+#slider ul li{
+    display: none;
+}
+#slider ul li.active{
+    display: block;
+    background-color: var(--Primary-Color);
+}
+#slider ul li img{
+    width: 100%;
+    opacity: 0.5;
+    display: block;
+}
+#slider ul li h3{
+    position: absolute;
+    top: 285px;
+    text-align: center;
+    display: block;
+    left: 0;
+    right: 0;
+    font-size: 30px;
+    font-weight: 900;
+}
+#slider ul li p{
+    position: absolute;
+    top: 320px;
+    text-align: center;
+    display: block;
+    left: 0;
+    right: 0;
+}
+#slider .btn-box{
+    position: absolute;
+    top: 370px;
+    text-align: center;
+    display: block;
+    left: 0;
+    right: 0;
+}
+#slider .btn-box a{
+    position: relative;
+    margin-left: 5px;
+    padding: 10px 30px;
+    border-radius: 3px;
+}
+#slider .control{
+    position: absolute;
+    top: 350px;
+    text-align: center;
+    display: block;
+    left: 0;
+    right: 0;
+    color: rgba(255,255,255,0.5);
+}
+#slider span{
+    background-color: rgba(255,255,255,.3);
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+}
+#slider span:hover{
+    background-color: var(--Secondary-Color);
+}
+#slider span i{
+    position: absolute;
+    top: 5px;
+    left: 15px;
+}
+#slider span.next{
+    right: 0;
+}
+#slider span.previous{
+    left: 0;
+}
+/*------------------------------/Slider------------------------------*/
+
+/*------------------------------Under Slider------------------------------*/
+#under-slider{
+    background-color: var(--Primary-Color);
+    height: 35px;
+    padding: 30px 0;
+}
+#under-slider p{
+    color: white;
+    line-height: 1.3;
+    float: right;
+}
+#under-slider p span{
+    color: var(--Text)!important;
+    display: block;
+}
+#under-slider .form-g{
+    float: right;
+    position: relative;
+    width: 40%;
+}
+#under-slider .form-g label{
+
+}
+#under-slider .form-g label i.fa{
+    position: absolute;
+    top: 5px;
+    right: 60px;
+}
+#under-slider .form-g input{
+    width: 300px;
+    padding-right: 30px;
+}
+#under-slider input[type=submit]{
+    padding: 3px 10px;
+    float: left;
+}
+/*------------------------------/Under Slider------------------------------*/
