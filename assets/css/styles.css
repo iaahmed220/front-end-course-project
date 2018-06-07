@@ -11,6 +11,8 @@
     --Tumbler           : #444444;
     --Tweeter           : #1da1f2;
     --Facebook          : #4867aa;
+    --Icon              : #a4a4a4;
+    --OffersItem        : #eeeeee;
 }
 @font-face {
     font-family: 'Yekan';
@@ -51,8 +53,20 @@ a{
     padding: 10px 30px;
     color: white;
 }
+.btn.form-element{
+    padding: 0 30px;
+}
 .btn-bordered{
     border : white solid 1px;
+}
+input[type=text].form-element{
+    height: 35px;
+    border: none;
+}
+input[type=button].form-element,
+input[type=submit].form-element,
+button.form-element{
+    height: 38px;
 }
 /*------------------------------/Template Global------------------------------*/
 
@@ -244,37 +258,151 @@ header nav img.logo{
 /*------------------------------Under Slider------------------------------*/
 #under-slider{
     background-color: var(--Primary-Color);
-    height: 35px;
+    height: 40px;
     padding: 30px 0;
 }
-#under-slider p{
-    color: white;
-    line-height: 1.3;
+#under-slider .box{
     float: right;
+    margin: 0 10px;
+    width: 35%;
 }
-#under-slider p span{
-    color: var(--Text)!important;
+#under-slider .box.min{
+    width: 10%;
+}
+#under-slider .box p{
+    line-height: 1.3;
+}
+#under-slider .box p span{
+    color: white;
     display: block;
 }
-#under-slider .form-g{
-    float: right;
+#under-slider .box label span{
     position: relative;
-    width: 40%;
+    margin-right: 10px;
 }
-#under-slider .form-g label{
+#under-slider .box label span i{
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    font-size: 20px;
+    color: var(--Icon);
+}
+#under-slider .box label input[type=text]{
+    width: 75%;
+    padding-right: 35px;
+}
+#under-slider .box input[type=submit]{
 
 }
-#under-slider .form-g label i.fa{
-    position: absolute;
-    top: 5px;
-    right: 60px;
-}
-#under-slider .form-g input{
-    width: 300px;
-    padding-right: 30px;
-}
-#under-slider input[type=submit]{
-    padding: 3px 10px;
-    float: left;
-}
 /*------------------------------/Under Slider------------------------------*/
+
+/*------------------------------Offers------------------------------*/
+#offers{
+    padding: 80px 0;
+    text-align: center;
+}
+#offers h2{
+    color : var(--Primary-Color);
+    font-size: 30px;
+    font-weight: 900;
+}
+#offers p{
+    color : var(--Text);
+    margin-bottom: 40px;
+}
+#offers ul{
+    margin: auto;
+    display: inline-block;
+}
+#offers ul li{
+    float: right;
+    background-color: var(--OffersItem);
+    margin: 10px 20px;
+    border-radius: 6px;
+}
+#offers ul li:first-child,
+#offers ul li:last-child{
+    opacity: 0.6;
+}
+#offers ul li.active{
+    float: right;
+    background-color: var(--Secondary-Color);
+    zoom: 1.2;
+    margin-top: -15px;
+}
+#offers ul li a{
+
+}
+#offers ul li a img{
+    border : solid 5px var(--OffersItem);
+    border-radius: 6px;
+}
+#offers ul li.active a img{
+    border : solid 5px var(--Secondary-Color);
+    border-bottom-color: transparent;
+}
+#offers ul li a span{
+    display: block;
+    color: var(--Text);
+    font-weight: 900;
+    text-align: right;
+    padding: 5px 15px;
+    position: relative;
+    font-size: 16px;
+    line-height: 1.4;
+    border-radius: 0 0 6px 6px;
+    margin-top: -17px;
+}
+#offers ul li.active a span{
+    background-color: var(--Primary-Color);
+    color: white;
+}
+#offers ul li a span i{
+    font-weight: 900;
+    font-size: 20px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+/*------------------------------/Offers------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
