@@ -366,6 +366,20 @@ header nav img.logo{
 }
 /*------------------------------/Offers------------------------------*/
 
+/*------------------------------Holiday------------------------------*/
+section#holiday{
+    height: 400px;
+    background: url("../img/holiday.jpg") no-repeat fixed center center;
+    background-size: cover;
+}
+section#holiday h3{}
+section#holiday p{}
+section#holiday ul{}
+section#holiday li{}
+section#holiday img{}
+section#holiday span{}
+/*------------------------------/Holiday------------------------------*/
+
 
 
 
