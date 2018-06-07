@@ -429,6 +429,83 @@ section#holiday span{
 }
 /*------------------------------/Holiday------------------------------*/
 
+/*------------------------------Quotation------------------------------*/
+section#quotation{
+    padding: 70px 0;
+}
+section#quotation h3{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 900;
+    color: var(--Primary-Color);
+}
+section#quotation p{
+    text-align: center;
+    color: var(--Text);
+}
+/*
+* TODO-Pure CSS Horizontal Scrolling
+* Trick : https://css-tricks.com/pure-css-horizontal-scrolling/
+**/
+section#quotation ul{
+    margin-top: 30px;
+    height: 200px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+section#quotation ul li{
+    width: 450px;
+    display: inline-block;
+    background-color: white;
+    border: solid 1px var(--Icon);
+    position: relative;
+    padding: 20px 15px;
+    margin-left: 10px;
+    opacity: 0.6;
+}
+section#quotation ul li.active{
+    opacity: 1;
+}
+section#quotation ul li:before{
+    position: absolute;
+    content: ' ';
+    top: 0;
+    height: 3px;
+    width: 100%;
+    right: 0;
+    background-color: var(--Secondary-Color);
+}
+section#quotation ul li:after{
+    position: absolute;
+    content: ' ';
+    top: 0;
+    height: 3px;
+    width: 100%;
+    right: 0;
+    background-color: var(--Secondary-Color);
+}
+section#quotation ul li p{
+    text-align: right;
+    font-weight: 900;
+    color: var(--Primary-Color);
+    white-space: normal;
+}
+section#quotation ul li strong{
+    display: block;
+    line-height: 1.3;
+    margin-top: 5px;
+    padding-right: 10px;
+    color: var(--Secondary-Color);
+}
+section#quotation ul li span{
+    display: block;
+    line-height: 1.3;
+    padding-right: 10px;
+    color: var(--Icon);
+}
+/*------------------------------/Quotation------------------------------*/
+
 
 
 
