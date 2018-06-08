@@ -52,6 +52,7 @@ a{
     border: none;
     padding: 10px 30px;
     color: white;
+    cursor: pointer;
 }
 .btn.form-element{
     padding: 0 30px;
@@ -68,6 +69,10 @@ input[type=submit].form-element,
 button.form-element{
     height: 38px;
 }
+li.pinterest:hover a{color : var(--Pinterest)!important;}
+li.tumblr a:hover{color: var(--Tumbler)!important;}
+li.twitter a:hover{color: var(--Tweeter)!important;}
+li.facebook a:hover{color: var(--Facebook)!important;}
 /*------------------------------/Template Global------------------------------*/
 
 /*------------------------------Header------------------------------*/
@@ -88,10 +93,6 @@ header div.top-header ul.menu li{
     position: relative;
     margin-left: 20px;
 }
-header div.top-header ul.menu li.pinterest:hover a{color : var(--Pinterest);}
-header div.top-header ul.menu li.tumblr a:hover{color: var(--Tumbler)}
-header div.top-header ul.menu li.twitter a:hover{color: var(--Tweeter)}
-header div.top-header ul.menu li.facebook a:hover{color: var(--Facebook)}
 header div.top-header ul.menu li:before,
 header div.top-header ul.menu li:after{
     position: absolute;
@@ -386,6 +387,8 @@ section#holiday:before{
     background-size: cover;
     opacity: 0.3;
     z-index: 1;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
 section#holiday h3{
     z-index: 2;
@@ -524,43 +527,112 @@ section#quotation ul li span:before{
 }
 /*------------------------------/Quotation------------------------------*/
 
+/*------------------------------Footer------------------------------*/
+footer{
+    background-color: var(--Primary-Color);
+    color: white;
+    position: relative;
+    padding: 80px 0;
+}
+footer aside{
+    width: 24%;
+    float: right;
+    margin-left: 1%;
+}
+footer aside h4{
+    color: var(--Secondary-Color);
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+footer aside.address{}
+footer aside.address p span{
+    color : var(--Secondary-Color)
+}
+footer aside.address ul li{
+    display: inline-block;
+    font-size: 25px;
+    padding: 10px;
+}
+footer aside.address ul li a{
+    transition: ease-in-out all 0.3s;
+}
+footer aside.tags span{
+    border: solid 1px white;
+    padding: 5px;
+    margin-left: 3px;
+    line-height: 2.8;
+    white-space: nowrap;
+}
+footer aside.latest-news ul{}
+footer aside.latest-news ul li{
+    margin-bottom: 25px;
+}
+footer aside.latest-news ul li img{
+    padding: 4px;
+    border: solid 1px white;
+    float: right;
+    margin-left: 10px;
+}
+footer aside.latest-news ul li p{
+    float: right;
+    line-height: 1.3;
+    margin: 0;
+    display: block;
+    font-size: 13px;
+}
+footer aside.latest-news ul li span{
+    display: block;
+    float: right;
+    color : var(--Secondary-Color);
+}
+footer aside.subscribe form input[type=text]{
+    width: 55%;
+    padding-right: 10px;
+    margin-left: 5px;
+}
+footer aside.subscribe form input{
+    border-radius: 3px;
+}
+footer .under-footer{
+    text-align: center;
+}
+footer .under-footer ul{}
+footer .under-footer ul li{
+    display: inline-block;
+    padding: 5px 15px;
+}
+footer .under-footer ul li.active a{
+    color : var(--Secondary-Color);
+}
+footer .under-footer ul li a{
+    position: relative;
+}
+footer .under-footer ul li a:before{
+    position: absolute;
+    content: '::';
+    display: block;
+    font-family: Tahoma;
+    left: -20px;
+    top: -5px;
+    color: white;
+}
+footer .under-footer p{
+    color: var(--Text);
+}
+footer .under-footer button{
+    position: absolute;
+    bottom: 0;
+    background-color: transparent;
+    border: none;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    border-bottom: solid 30px var(--Secondary-Color);
+    border-left: solid 30px transparent;
+    border-right: solid 30px transparent;
+    cursor: pointer;
+}
+footer .under-footer button i{
+    color: white;
+    position: relative;
+    bottom: -24px;
+}
+/*------------------------------/Footer------------------------------*/
