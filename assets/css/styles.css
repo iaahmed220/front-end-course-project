@@ -301,6 +301,7 @@ header nav img.logo{
 #offers{
     padding: 80px 0;
     text-align: center;
+    overflow: hidden;
 }
 #offers h2{
     color : var(--Primary-Color);
@@ -314,9 +315,14 @@ header nav img.logo{
 #offers ul{
     margin: auto;
     display: inline-block;
+    height: 310px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-top: 20px;
 }
 #offers ul li{
-    float: right;
+    display: inline-block;
     background-color: var(--OffersItem);
     margin: 10px 20px;
     border-radius: 6px;
@@ -326,7 +332,6 @@ header nav img.logo{
     opacity: 0.6;
 }
 #offers ul li.active{
-    float: right;
     background-color: var(--Secondary-Color);
     zoom: 1.2;
     margin-top: -15px;
@@ -372,7 +377,6 @@ header nav img.logo{
 /*------------------------------Holiday------------------------------*/
 section#holiday{
     height: 600px;
-    position: relative;
     background-color: var(--Primary-Color);
     text-align: center;
     z-index: -1;
@@ -450,7 +454,7 @@ section#quotation p{
     color: var(--Text);
 }
 /*
-* TODO-Pure CSS Horizontal Scrolling
+* TODO CSS Horizontal Scrolling
 * Trick : https://css-tricks.com/pure-css-horizontal-scrolling/
 **/
 section#quotation ul{
@@ -562,6 +566,7 @@ footer aside.tags span{
     margin-left: 3px;
     line-height: 2.8;
     white-space: nowrap;
+    cursor: pointer;
 }
 footer aside.latest-news ul{}
 footer aside.latest-news ul li{
@@ -619,20 +624,22 @@ footer .under-footer ul li a:before{
 footer .under-footer p{
     color: var(--Text);
 }
-footer .under-footer button{
+footer #scroll-top{
     position: absolute;
     bottom: 0;
     background-color: transparent;
     border: none;
+    display: inline-block;
 
-    border-bottom: solid 30px var(--Secondary-Color);
-    border-left: solid 30px transparent;
-    border-right: solid 30px transparent;
+    border-bottom: solid 40px var(--Secondary-Color);
+    border-left: solid 40px transparent;
+    border-right: solid 40px transparent;
     cursor: pointer;
 }
-footer .under-footer button i{
+footer #scroll-top i{
     color: white;
-    position: relative;
-    bottom: -24px;
+    position: absolute;
+    top: 20px;
+    left: -6px;
 }
 /*------------------------------/Footer------------------------------*/
