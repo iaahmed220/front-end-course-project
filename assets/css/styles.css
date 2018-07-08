@@ -146,7 +146,22 @@ header nav ul li.search{
     width: 30px;
     height: 30px;
     border-radius: 50%;
-
+}
+header nav ul li.search span{
+    position: absolute;
+    top: 32px;
+    right: 0;
+    z-index: 2;
+}
+header nav ul li.search span input[type=text].form-element{
+    border: 1px solid grey;
+    height: 24px;
+    font-size: 13px;
+}
+header nav ul li.search span input[type=submit].form-element{
+    border: 1px solid grey;
+    font-size: 13px;
+    width: 100%;
 }
 header nav ul li.active a{
     color: var(--Secondary-Color);
